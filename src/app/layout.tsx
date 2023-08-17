@@ -21,8 +21,10 @@ export default function RootLayout({
         <ul>
           <li><Link href="/">Home</Link></li>
           <li><Link href="/foo/bar">Non-existent segment</Link></li>
-          <li><Link href="/dynamic/foo">Existing dynamic segment</Link></li>
-          <li><Link href="/dynamic/404">Dynamic not found</Link></li>
+          <li><Link href="/dynamic/foo">Dynamic segment</Link></li>
+          <li><Link href="/dynamic/404">Dynamic 404</Link></li>
+          <li><Link href="/dynamic-with-not-found/foo">Dynamic-with-not-found segment</Link></li>
+          <li><Link href="/dynamic-with-not-found/404">Dynamic-with-not-found 404</Link></li>
         </ul>
         {children}
       </body>
