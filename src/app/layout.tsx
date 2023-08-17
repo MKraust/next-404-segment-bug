@@ -1,6 +1,6 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +16,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <h1>Root layout</h1>
+        <ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/foo/bar">Non-existent segment</Link></li>
+          <li><Link href="/dynamic/foo">Existing dynamic segment</Link></li>
+          <li><Link href="/dynamic/404">Dynamic not found</Link></li>
+        </ul>
+        {children}
+      </body>
     </html>
   )
 }
